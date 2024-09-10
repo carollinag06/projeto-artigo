@@ -1,0 +1,239 @@
+@font-face {
+    font-family: idroid;
+    src: url('../desafio 10/fonts/IDroid.otf') format('opentype');
+  }
+  
+  /* VARIAVEIS*/
+:root{
+  --cor00:#7fc5a249;
+  --cor01:#7fc5a2;
+  --cor02:#ffffff;
+  --cor03:#206345;
+  --cor04:#b1ff8c;
+  --cor05:#7aa4663a;
+  --cor06:#0b3f27;
+  --cor07:#000000;
+  --cor08:#7fc5a275;
+  --cor09:#00a058;
+  --cor10:#31990160;
+
+  --font-padrao:  Arial,  sans-serif, Helvetica;
+  --font-adroid: fonts/IDroid.otf;
+}
+
+/* ESTILO GERAL */
+*{
+  font-family: var(--font-padrao);
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: var(--cor01);
+}
+
+a{
+  text-decoration: none;
+}
+
+.titulo{
+  font-family: idroid;
+  color: var(--cor09);
+}
+
+.titulo-degrade{
+  font-family: idroid;
+  color: var(--cor09);
+  background-image: linear-gradient(to right, var(--cor10), transparent);
+
+}
+
+
+/* ESTILO CABEÇALHO */
+header{
+  background-image: linear-gradient(to bottom, var(--cor03), var(--cor09));
+  width: 100%;
+  color: var(--cor02);
+}
+
+header .cabecalho{
+  text-align: center;
+  padding: 50px 4%;
+  text-shadow: 2px 2px 0 black;
+}
+
+header h1{
+  padding: 10px;
+  font-size: 40px;
+}
+nav{
+  padding: 15px;
+}
+
+nav a{
+  font-weight: 600;
+}
+
+header a{
+  transition: .3s;
+  color: var(--cor02);
+  margin: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+header a:hover{
+  color: var(--cor06);
+  background-color: var(--cor01);
+}
+
+/* estilo text-historia */
+main{
+  background-color: var(--cor02);
+  width: 70%;
+  display: flex;
+  margin: auto;
+  padding: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.text-historia h2{
+  padding: 3px;
+  margin: 10px 0;
+}
+
+.text-historia p{
+  text-indent: 30px;
+  text-align: justify;
+  line-height: 1.5em;
+}
+.text-historia span{
+  font-weight: bold;
+}
+main .img-historia-g{
+  padding: 20px 0;
+}
+
+main .img-historia-p{
+  text-align: center;
+  padding: 20px 0;
+}
+
+main span{
+  color: var(--cor03);
+  font-weight: bold;
+  background-color: var(--cor00);
+}
+
+main span:hover{
+  text-decoration: underline;
+}
+
+/* ESTILOS IMAGENS */
+.img-historia-g img{
+  width: 100%;
+}
+
+.img-historia-p img{
+  max-width: 700px;
+}
+
+/* ESTILO VIDEO */
+.video-historia{
+  text-align: center;
+  padding: 20px;
+  background-color: #206345;
+  border-radius: 10px;
+}
+
+/* ESTILO DICIONARIO */
+.dicionario{
+  background-color: var(--cor05);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.dicionario h2{
+  background-color: var(--cor03);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+.dicionario p{
+  padding-top: 10px;
+}
+
+.column {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.column ul {
+  list-style-position: inside;
+  text-align: justify;
+  columns: 2;
+  margin-right: 20px;
+}
+
+.column ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+  list-style-type: '\2714\0020\0020';
+}
+
+.column a{
+  color: var(--cor07);
+}
+
+.column a:hover{
+  text-decoration: underline;
+  background-color: var(--cor08);
+}
+
+/* ESTILO RODAPE */
+footer{
+  background-color: var(--cor06);
+  padding: 10px;
+  text-align: center;
+  color: var(--cor02);
+  margin-top: 50px;
+}
+
+footer a{
+  color: var(--cor02);
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+/* AREA RESPONSIVA */
+
+/* estilo GERAL */
+@media screen and (max-width: 1000px){
+  *{
+    flex-direction: column;
+  }
+  img-historia-g{
+    text-align: center;
+    width: 100%;
+  }
+  /* estilo cabeçalho */
+    nav{
+      padding: 5px;
+    }
+    header a{
+      margin: 2px;
+    }
+  
+  /* estilo DICIONARIO */
+  .dicionario ul{
+    columns: 1;
+    margin: 15px;
+  }
+}
